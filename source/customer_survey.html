@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Survey</title>
+    <style>
+        body {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+            background-color: #eef2f5;
+            color: #222;
+            padding: 30px 15px;
+            margin: 0;
+        }
+
+        .survey-card {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-top: 6px solid #2b6cb0;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #2b6cb0;
+            font-size: 26px;
+        }
+
+        .description {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .label-title {
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .required {
+            color: #e53e3e;
+            margin-left: 3px;
+        }
+
+        .option-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .option-list label {
+            font-weight: normal;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        select, input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        textarea {
+            height: 90px;
+            resize: vertical;
+        }
+
+        /* Styling cho bảng Matrix / Rating Table */
+        .matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .matrix-table th, .matrix-table td {
+            border: 1px solid #e2e8f0;
+            padding: 10px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .matrix-table th {
+            background-color: #f7fafc;
+            color: #4a5568;
+        }
+
+        .matrix-table td:first-child {
+            text-align: left;
+            font-weight: bold;
+            color: #4a5568;
+        }
+
+        .matrix-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .btn-submit {
+            background-color: #2b6cb0;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #2c5282;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="survey-card">
+        <h1>Market Research Survey</h1>
+        <p class="description">Please take a few minutes to tell us more about you and your preferences.</p>
+
+        <form action="#" method="POST">
+            
+            <!-- Question 1: Age Range -->
+            <div class="form-group">
+                <label class="label-title">What is your age range?<span class="required">*</span></label>
+                <select name="age" required>
+                    <option value="">-- Select Age Range --</option>
+                    <option value="18-24">18-24</option>
+                    <option value="25-34">25-34</option>
+                    <option value="35-44">35-44</option>
+                    <option value="45-54">45-54</option>
+                    <option value="55+">55 or older</option>
+                </select>
+            </div>
+
+            <!-- Question 2: Gender -->
+            <div class="form-group">
+                <label class="label-title">What is your gender?<span class="required">*</span></label>
+                <div class="option-list">
+                    <label><input type="radio" name="gender" value="Female" required> Female</label>
+                    <label><input type="radio" name="gender" value="Male"> Male</label>
+                    <label><input type="radio" name="gender" value="Non-binary"> Non-binary</label>
+                    <label><input type="radio" name="gender" value="Prefer not to say"> Prefer not to say</label>
+                </div>
+            </div>
+
+            <!-- Question 3: Income -->
+            <div class="form-group">
+                <label class="label-title">What is your annual household income?<span class="required">*</span></label>
+                <select name="income" required>
+                    <option value="">-- Select Income Range --</option>
+                    <option value="<25k">Under $25,000</option>
+                    <option value="25k-50k">$25,000 - $49,999</option>
+                    <option value="50k-75k">$50,000 - $74,999</option>
+                    <option value="75k-100k">$75,000 - $99,999</option>
+                    <option value=">100k">$100,000 or more</option>
+                </select>
+            </div>
+
+            <!-- Question 4: Product/Service Usage Matrix -->
+            <div class="form-group">
+                <label class="label-title">How satisfied are you with the following features?<span class="required">*</span></label>
+                <table class="matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Very Unsatisfied</th>
+                            <th>Unsatisfied</th>
+                            <th>Neutral</th>
+                            <th>Satisfied</th>
+                            <th>Very Satisfied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Product Quality</td>
+                            <td><input type="radio" name="quality" value="1" required></td>
+                            <td><input type="radio" name="quality" value="2"></td>
+                            <td><input type="radio" name="quality" value="3"></td>
+                            <td><input type="radio" name="quality" value="4"></td>
+                            <td><input type="radio" name="quality" value="5"></td>
+                        </tr>
+                        <tr>
+                            <td>Pricing & Value</td>
+                            <td><input type="radio" name="price" value="1" required></td>
+                            <td><input type="radio" name="price" value="2"></td>
+                            <td><input type="radio" name="price" value="3"></td>
+                            <td><input type="radio" name="price" value="4"></td>
+                            <td><input type="radio" name="price" value="5"></td>
+                        </tr>
+                        <tr>
+                            <td>Customer Support</td>
+                            <td><input type="radio" name="support" value="1" required></td>
+                            <td><input type="radio" name="support" value="2"></td>
+                            <td><input type="radio" name="support" value="3"></td>
+                            <td><input type="radio" name="support" value="4"></td>
+                            <td><input type="radio" name="support" value="5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Question 5: Checkboxes -->
+            <div class="form-group">
+                <label class="label-title">Which of the following channels do you use to discover new products? (Select all that apply)</label>
+                <div class="option-list">
+                    <label><input type="checkbox" name="channels" value="Social Media"> Social Media (Facebook, Instagram, TikTok)</label>
+                    <label><input type="checkbox" name="channels" value="Search Engines"> Search Engines (Google, Bing)</label>
+                    <label><input type="checkbox" name="channels" value="Friends/Family"> Recommendations from Friends / Family</label>
+                    <label><input type="checkbox" name="channels" value="Online Ads"> Online Advertisements</label>
+                </div>
+            </div>
+
+            <!-- Question 6: Open-ended feedback -->
+            <div class="form-group">
+                <label class="label-title" for="comments">Do you have any additional comments or suggestions?</label>
+                <textarea id="comments" name="comments" placeholder="Type your response here..."></textarea>
+            </div>
+
+            <!-- Question 7: Email address -->
+            <div class="form-group">
+                <label class="label-title" for="email">Please share your email address if you'd like to receive follow-up updates:</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-submit">Submit Survey</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
