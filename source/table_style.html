@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Định Kiểu Bảng Trong CSS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px;
+            background-color: #fafafa;
+        }
+
+        /* 1. Thiết lập bảng tổng thể */
+        table {
+            width: 100%;                  /* Bảng chiếm 100% chiều rộng */
+            border-collapse: collapse;    /* Gộp đường viền liền kề thành 1 */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        /* 2. Định kiểu đường viền và khoảng cách đệm (padding) */
+        table, th, td {
+            border: 1px solid #000000;    /* Đường viền 1px nét liền màu đen */
+        }
+
+        th, td {
+            padding: 15px;                /* Tạo khoảng cách 15px giữa viền và chữ */
+        }
+
+        /* 3. Định kiểu cho ô tiêu đề (th) */
+        th {
+            height: 50px;                 /* Chiều cao tối thiểu 50px */
+            background-color: #333333;    /* Màu nền tối */
+            color: #ffffff;               /* Chữ màu trắng */
+            text-align: left;             /* Căn trái chữ */
+        }
+
+        /* 4. Định kiểu cho ô dữ liệu (td) */
+        td {
+            height: 80px;                 /* Chiều cao 80px để thử nghiệm vertical-align */
+            background-color: #f2f2f2;    /* Nền xám nhạt */
+            color: #333333;               /* Chữ xám đậm */
+            vertical-align: bottom;       /* Căn chữ xuống phía dưới theo chiều dọc */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Định Kiểu Bảng Học Viên Với CSS</h2>
+
+    <table>
+        <tr>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Lớp</th>
+        </tr>
+        <tr>
+            <td>Nguyễn Văn A</td>
+            <td>20</td>
+            <td>Web</td>
+        </tr>
+        <tr>
+            <td>Trần Thị B</td>
+            <td>21</td>
+            <td>Web</td>
+        </tr>
+    </table>
+
+</body>
+</html>
