@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch họp công ty</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f6f9;
+        }
+
+        h1 {
+            color: #1a73e8;
+        }
+
+        table {
+            width: 100%;
+            max-width: 700px;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            border: 1px solid #dcdfe6;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #1a73e8;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9fa12;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lịch họp công ty</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ngày</th>
+                <th>Giờ</th>
+                <th>Nội dung cuộc họp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- Gộp 2 hàng cho Thứ Hai -->
+                <td rowspan="2">Thứ Hai (20/10)</td>
+                <td>08:00 - 09:30</td>
+                <td>Họp giao ban đầu tuần</td>
+            </tr>
+            <tr>
+                <td>14:00 - 16:00</td>
+                <td>Báo cáo tiến độ dự án GitProject</td>
+            </tr>
+            <tr>
+                <!-- Gộp 2 cột Giờ và Nội dung cho sự kiện kéo dài cả ngày -->
+                <td>Thứ Ba (21/10)</td>
+                <td colspan="2">Đào tạo nhân sự mới (Cả ngày)</td>
+            </tr>
+            <tr>
+                <!-- Gộp 2 hàng cho Thứ Tư -->
+                <td rowspan="2">Thứ Tư (22/10)</td>
+                <td>09:00 - 11:30</td>
+                <td>Họp với khách hàng đối tác</td>
+            </tr>
+            <tr>
+                <td>15:00 - 17:00</td>
+                <td>Tổng kết kế hoạch quý IV</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
