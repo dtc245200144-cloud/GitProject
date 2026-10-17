@@ -1,0 +1,88 @@
+/* Định dạng chung */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Định dạng tiêu đề chính (Header) */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/* Định dạng phần giới thiệu và ảnh đại diện */
+.profile {
+    margin: 20px 0;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #4CAF50;
+    margin: 20px;
+    object-fit: cover;
+}
+
+/* Định dạng phần sở thích & mục tiêu */
+.hobbies, .goals {
+    margin: 20px 0;
+}
+
+h2 {
+    color: #2e7d32;
+}
+
+ul {
+    list-style-type: square;
+    text-align: left;
+    display: inline-block;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+ul li {
+    padding: 4px 0;
+}
+
+/* Định dạng bảng thông tin liên hệ */
+table {
+    margin: 15px auto;
+    border-collapse: collapse;
+    width: 60%;
+    max-width: 500px;
+    background-color: #ffffff;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    width: 30%;
+}
+
+td a {
+    color: #1b5e20;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Định dạng chân trang (Footer) */
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e0e0e0;
+}
